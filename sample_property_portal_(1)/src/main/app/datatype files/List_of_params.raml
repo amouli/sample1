@@ -1,0 +1,150 @@
+#%RAML 1.0 DataType
+type: object
+properties:
+  allOrNone:
+    type: string
+    required: false
+  records:
+    type: array
+    items:
+      properties:
+        attributes:
+          type: object
+          required: false
+          properties:
+            type:
+              type: string
+              required: false
+            referenceId:
+              type: string
+              required: false
+        LastName:
+          type: string
+          required: false
+        FirstName:
+          type: string
+          required: false  
+        Salutation:
+          type: object
+          properties:
+            MRS.:
+              type: string
+              required: false
+            MR.:
+              type: string
+              required: false
+            MS.:
+              type: string
+              required: false
+        MiddleName:
+          type: string
+          required: false 
+        Phone:
+          type: string
+          required: false
+        MobilePhone:
+          type: string
+          required: false 
+        Email:
+          type: string
+          required: false
+        Status:
+          type: string
+          required: false 
+        Rating:
+          type: object
+          properties:
+            Hot:
+              type: string
+              required: false
+            Warm:
+              type: string
+              required: false
+            Cold:
+              type: string
+              required: false
+
+        Address_Line_1__:
+          type: string
+          required: false 
+        Address_Line_2__c:
+          type: string
+          required: false
+        Annual_Income__c:
+          type: string
+          required: false 
+        Call_Status__c:
+          type: !include callstatus.raml
+          required: false
+        Contacted_Date__c:
+          type: string
+          required: false
+        Current_EMI_Details__c:
+          type: string
+          required: false
+        Customer_Segment__c:
+          type: !include CustomerSegament.raml
+          required: false  
+        Date_of_Birth__c:
+          type: string
+          required: false
+        Income_Details__c:
+          type: string
+          required: false 
+        Monthly_Income__c:
+          type: string
+          required: false
+        Nationality__c:
+          type: string
+          required: false 
+        Organization_Name__c:
+          type: string
+          required: false
+        Product_Scheme__c:
+          type: string
+          required: false 
+        Product__c:
+          type: string
+          required: false
+        Remarks__c:
+          type: string
+          required: false 
+        Requested_Loan_Amount__c:
+          type: string
+          required: false
+        Source_Detail__c:
+          type: object
+          properties:
+            PaisaBazaar.com:
+              type: string
+              required: false
+            BankBazaar.com :
+              type: string
+              required: false     
+        Transaction_type__c:
+          type: !include transactiontype.raml
+          required: false
+        Vendor_Name__c:
+          type: string
+          required: false   
+        Vendor_Password__c:
+          type: string
+          required: false 
+        Vendor_Lead_Id__c:
+          type: string
+          required: false
+        Product_Scheme__r:
+          type: string
+          required: false 
+        Scheme_ID__c:
+          type: string
+          required: false
+        RecordType::
+          type: !include recordtype.raml
+          required: false   
+
+             
+           
+
+             
+      

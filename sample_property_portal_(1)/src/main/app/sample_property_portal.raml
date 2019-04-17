@@ -1,0 +1,32 @@
+#%RAML 1.0
+title: Call_Back_Api
+version: 1.0
+baseUri: https://anypoint.mulesoft.com/mocking/api/v1/links/ba624ee6-13a8-4ba9-bfd4-087ed793b930/ # baseUri: http://localhost:8081
+
+securitySchemes:
+  basic:
+    type: Basic Authentication
+/sample_property_portal:
+  post:
+    body:
+      application/json:
+        type: !include datatype files/List_of_params.raml
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include example/200.raml
+              
+      400:
+        body:
+          application/json:
+            example: !include example/400.raml
+              
+      401:
+        body:
+          application/json:
+            example: !include example/401.raml
+      500:
+        body:
+          application/json:
+            example: !include example/500.raml
